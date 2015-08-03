@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+ <script src="js/jquery-1.7.1.js"></script>
+ <script src="js/main.js"></script>
+ <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+</head>
+<body align="center">
+		<h1> Web Storage Sample</h1>
+		<h2>There are two type of Web Storage: &nbsp; &nbsp; 1. Local storage&nbsp;&nbsp;&nbsp;   2. Session Storage</h2>
+<div id="page"> 
+ <div id="left-panel">
+	<div data-role="page" id="local-storage-page">
+		<div data-role="header" data-position="fixed">
+			<br>
+			<h1>Local Storage (Permanent Sorage)</h1>
+			<br>
+		</div>
+		<!-- /header -->
+
+		<div data-role="content" class="inputFilelds">
+			<br>
+
+			<p>Enter text in field to save in Local Storage:</p>
+			<br>field 1 : <input type="text" id="filed1Local" tabindex="0" class="inputFilelds"
+				>
+			
+			field 2 : <input type="text" id="filed2Local" tabindex="1" class="inputFilelds"><br> <br>
+			 <br> <br>
+		</div>
+	
+	</div>
+
+	<div data-role="page" id="play-game-page">
+		<br> <br>
+		 <br> <br> <br> <br><br> <br> <br> <br><br> <br> <br> <br>
+		<button type="button" id="saveToWbStorageLocal" tabindex="2" class="inputFilelds">Save field 1 & field 2 to web storage</button>	<br><br>	
+		<button type="button" id="getFromWebStorageLocal" tabindex="3" class="inputFilelds">Get field 1 & field 2 from web storage</button><br>	<br>
+		<button type="button" id="clearWebStorageLocal" tabindex="4" class="inputFilelds">Clear Web Storage</button>		<br><br>
+	</div>
+	 
+ </div>
+  <div id="right-panel">
+  
+	<div data-role="page" id="local-storage-page">
+		<div data-role="header" data-position="fixed">
+			<br>
+			<h1>Session Storage (temporary Storage: destroyed when application is closed)</h1>
+		</div>
+		<!-- /header -->
+
+		<div data-role="content" class="inputFilelds">
+			<br>
+
+			<p>Enter text in field to save in Session Storage:</p>
+			<br>field 1: <input type="text" id="filed1Session" tabindex="5" class="inputFilelds"
+				>
+			
+			field 2 : <input type="text" id="filed2Session" tabindex="6" class="inputFilelds"><br> <br>
+			 <br> <br>
+		</div>
+	
+	</div>
+
+	<div data-role="page" id="play-game-page">
+		<br> <br>
+		 <br> <br> <br> <br><br> <br> <br> <br><br> <br> <br> <br>
+		<button type="button" id="saveToWbStorageSession" tabindex="7" class="inputFilelds">Save field 1 & field 2 to web storage</button>	<br><br>	
+		<button type="button" id="getFromWebStorageSession" tabindex="8" class="inputFilelds">Get field 1 & field 2 from web storage</button><br>	<br>
+		<button type="button" id="clearWebStorageSession" tabindex="9" class="inputFilelds">Clear Web Storage</button>		<br><br>
+	</div>
+	 
+ </div>
+ <div style="border:2px solid black;font-size:42px;position:inherit;top:500px;text-align:center;" id="alertMessage"></div>
+	</div>
+</body>
+</html>

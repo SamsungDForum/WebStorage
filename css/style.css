@@ -1,0 +1,52 @@
+
+body {
+    overflow-x: hidden;
+   
+}
+/* 
+#left-panel
+{        
+    background-color:#ffffff;
+    width:40%;
+    height:1200px;
+    padding-left: 0.5cm;
+    padding-top: 0.5cm;
+   
+    float:left;            
+}
+#right-panel
+{        
+   
+    width:60%;
+    height:1200px;
+     
+        padding-right: 0.5cm;
+    padding-bottom: 0.5cm;
+    } */
+
+
+.inputFilelds {
+     height: 40px;
+    font: bold 20px Georgia, serif;
+ } 
+ 
+ 
+ 
+ #page {
+    margin-left: 0px;
+}
+#right-panel {
+    float: right;
+    width: 50%;
+    background-color: #F0F0F0;
+}
+#left-panel{
+    float: left;
+    width: 50%;
+    margin-left: 0px;
+    background-color: #CCCCCC;
+     float:left; 
+}
+#clearingdiv {
+    clear: both;
+}
