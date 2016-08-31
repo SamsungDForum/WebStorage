@@ -8,33 +8,20 @@ var init = function ()
 	{
 		var msg = "Sorry, currently Tizen does not support web storage";		
 		//alert(msg);
-		$('#alertMessage').html(msg);
+		document.getElementById('alertMessage').innerHTML = msg;
 	}
 
 	
-	$("#filed1Local").focus();
-	
 	
 // registering click event with buttons
-	$('#saveToWbStorageLocal').bind('click', function(){saveToWbLocalStorage();});
-	$('#getFromWebStorageLocal').bind('click', function(){getFromWebLocalStorage();});
-	$('#clearWebStorageLocal').bind('click', function(){clearWebLocalStorage();});
+	document.getElementById('saveToWbStorageLocal').addEventListener('click', function(){saveToWbLocalStorage();});
+	document.getElementById('getFromWebStorageLocal').addEventListener('click', function(){getFromWebLocalStorage();});
+	document.getElementById('clearWebStorageLocal').addEventListener('click', function(){clearWebLocalStorage();});
 	
-	$('#saveToWbStorageSession').bind('click', function(){saveToWbSessionStorage();});
-	$('#getFromWebStorageSession').bind('click', function(){getFromWebSessionStorage();});
-	$('#clearWebStorageSession').bind('click', function(){clearWebSessionStorage();});
-	
-
-
-	
-	
-	
+	document.getElementById('saveToWbStorageSession').addEventListener('click', function(){saveToWbSessionStorage();});
+	document.getElementById('getFromWebStorageSession').addEventListener('click', function(){getFromWebSessionStorage();});
+	document.getElementById('clearWebStorageSession').addEventListener('click', function(){clearWebSessionStorage();});
 };
-
-$(document).ready(init);
-
-
-
 
 
 /**
@@ -42,12 +29,12 @@ $(document).ready(init);
  */
 function saveToWbLocalStorage()
 {
-		var val_filed1 = $('#filed1Local').val().trim();
-		var val_filed2 = $('#filed2Local').val().trim();
+		var val_filed1 = document.getElementById('filed1Local').value;
+		var val_filed2 = document.getElementById('filed2Local').value;
 
 		localStorage.setItem("key_filed1", val_filed1);
 		localStorage.setItem("key_filed2", val_filed2);
-		$('#alertMessage').html('Data sucessfully saved');
+		document.getElementById('alertMessage').innerHTML = 'Data sucessfully saved';
 }
 
 
@@ -61,7 +48,7 @@ function getFromWebLocalStorage()
 	
 		var msg = "field 1 : " + localStorage.getItem("key_filed1") + ",  field 2 : " + localStorage.getItem("key_filed2");
 		//alert(msg);
-		$('#alertMessage').html(msg);
+		document.getElementById('alertMessage').innerHTML = msg;
 	
 }
 
@@ -72,7 +59,7 @@ function getFromWebLocalStorage()
 function clearWebLocalStorage()
 {
 	localStorage.clear();
-	$('#alertMessage').html("Data cleared from storage");
+	document.getElementById('alertMessage').innerHTML = "Data cleared from storage";
 }
 
 
@@ -83,12 +70,12 @@ function clearWebLocalStorage()
  */
 function saveToWbSessionStorage(name, newScore)
 {
-		var val_filed1 = $('#filed1Session').val().trim();
-		var val_filed2 = $('#filed2Session').val();
+		var val_filed1 = document.getElementById('filed1Session').value;
+		var val_filed2 = document.getElementById('filed2Session').value;
 
 		sessionStorage.setItem("key_filed1", val_filed1);
 		sessionStorage.setItem("key_filed2", val_filed2);
-		$('#alertMessage').html("Data sucessfully saved");
+		document.getElementById('alertMessage').innerHTML = "Data sucessfully saved";
 }
 
 
@@ -103,7 +90,7 @@ function getFromWebSessionStorage()
 	
 		var msg = "field 1 : " + sessionStorage.getItem("key_filed1") + ",  field 2 : " + sessionStorage.getItem("key_filed2");
 		//alert(msg);
-		$('#alertMessage').html(msg);
+		document.getElementById('alertMessage').innerHTML = msg;
 	
 }
 
@@ -113,7 +100,7 @@ function getFromWebSessionStorage()
 function clearWebSessionStorage()
 {
 	sessionStorage.clear();
-	$('#alertMessage').html('Data cleared from storage');
+	document.getElementById('alertMessage').innerHTML = 'Data cleared from storage';
 	
 
 }
